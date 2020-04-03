@@ -45,6 +45,8 @@ spec:
             items:
               - key: pelias.json
                 path: pelias.json
+      tolerations:
+{{ toYaml .Values.api.tolerations | indent 8 }}
       nodeSelector:
 {{ toYaml .Values.api.nodeSelector | indent 8 }}
 {{- end -}}

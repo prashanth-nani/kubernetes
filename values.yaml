@@ -29,6 +29,7 @@ api:
     cpu: 0.1
   minReadySeconds: 10
   annotations: {}
+  tolerations: {}
   nodeSelector: {}
 
 placeholder:
@@ -55,6 +56,7 @@ placeholder:
     # cannot use a hyphen to match the k8s param due to https://github.com/helm/helm/issues/2192
     ephemeral_storage: 5Gi
   annotations: {}
+  tolerations: {}
   nodeSelector: {}
   pvc: {}
 #    create: true
@@ -75,6 +77,7 @@ libpostal:
   retries: 1 # number of time the API will retry requests to libpostal
   timeout: 5000 # time in ms the API will wait for libpostal responses
   annotations: {}
+  tolerations: {}
   nodeSelector: {}
 
 interpolation:
@@ -102,6 +105,7 @@ interpolation:
     # cannot use a hyphen to match the k8s param due to https://github.com/helm/helm/issues/2192
     ephemeral_storage: 5Gi
   annotations: {}
+  tolerations: {}
   nodeSelector: {}
   pvc: {}
 #    create: true
@@ -134,6 +138,7 @@ pip:
     # cannot use a hyphen to match the k8s param due to https://github.com/helm/helm/issues/2192
     ephemeral_storage: 35Gi
   annotations: {}
+  tolerations: {}
   nodeSelector: {}
   pvc: {}
 #    create: true
@@ -148,6 +153,7 @@ dashboard:
   replicas: 1
   dockerTag: "latest"
   domain: null # set this to enable an ingress
+  tolerations: {}
   nodeSelector: {}
 
 healthlogger:
@@ -160,6 +166,7 @@ healthlogger:
     memory: 100Mi
     cpu: 0.1
   annotations: {}
+  tolerations: {}
   nodeSelector: {}
   watch_interval: 60
 

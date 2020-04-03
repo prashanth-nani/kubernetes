@@ -38,5 +38,7 @@ spec:
             value: "{{ .Values.elasticsearch.host }}:{{ .Values.elasticsearch.port}}"
           - name: WATCH_INTERVAL
             value: {{ .Values.healthlogger.watch_interval | quote }}
+      tolerations:
+{{ toYaml .Values.healthlogger.tolerations | indent 8 }}
       nodeSelector:
 {{ toYaml .Values.healthlogger.nodeSelector | indent 8 }}

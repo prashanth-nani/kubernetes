@@ -37,6 +37,8 @@ spec:
             requests:
               memory: 0.2Gi
               cpu: 0.01
+      tolerations:
+{{ toYaml .Values.dashboard.tolerations | indent 8 }}
       nodeSelector:
 {{ toYaml .Values.dashboard.nodeSelector | indent 8 }}
 {{- end -}}

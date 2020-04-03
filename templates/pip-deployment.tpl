@@ -81,5 +81,7 @@ spec:
           {{- else }}
           emptyDir: {}
           {{- end }}
+      tolerations:
+{{ toYaml .Values.pip.tolerations | indent 8 }}
       nodeSelector:
 {{ toYaml .Values.pip.nodeSelector | indent 8 }}
